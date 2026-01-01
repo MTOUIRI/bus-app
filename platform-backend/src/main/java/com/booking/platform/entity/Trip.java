@@ -49,10 +49,10 @@ public class Trip extends BaseEntity {
     private Integer availableSeats;
     
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List seats;
+    private List<Seat> seats;
     
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List bookings;
+    private List<Booking> bookings;
     
     @PrePersist
     @PreUpdate
